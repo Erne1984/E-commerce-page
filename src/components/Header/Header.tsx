@@ -10,11 +10,11 @@ export default function Header({ }) {
                     <h1 className="logo">SNEAKERS</h1>
 
                     <ul className='list-itens'>
-                        <li>Collections</li>
-                        <li>Men</li>
-                        <li>Woman</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><span>Collections</span></li>
+                        <li><span>Men</span></li>
+                        <li><span>Woman</span></li>
+                        <li><span>About</span></li>
+                        <li><span>Contact</span></li>
                     </ul>
                 </div>
 
