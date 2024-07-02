@@ -1,0 +1,53 @@
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.left-column{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: lowercase;
+}
+
+.list-itens{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 8px;
+}
+
+.list-itens li:hover{
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 2px solid #ff7d1b;
+}
+
+.right-column{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all .2s ease-in-out; 
+}
+
+.cart:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+}  
+
+.avatar{
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.avatar:hover{
+    border: #ff7d1b solid 2px;
+    cursor: pointer;
+}
