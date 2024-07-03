@@ -1,0 +1,84 @@
+.container-descri{
+    width: 500px;
+}
+
+.subtitle{
+    font-size: 1rem;
+    color: #9b9c9a;
+}
+
+.product-name-title{
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.product-descri{
+    width: 400px;
+    text-align: justify;
+    color: #c2c3c2;
+    margin-bottom: 1rem;
+}
+
+.price-box{
+    display: flex;
+    gap: 12px;
+}
+
+.price-box .discount{
+    position: relative;
+    top: 1px;
+    color: #fff;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    height: fit-content;
+}
+
+.price-box .previous-value{
+    margin: 1.3rem 0;
+    font-size: 0.8rem;
+    color: #9b9c9a;
+    text-decoration-line: line-through;
+}
+
+.current-price-box p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.add-to-cart-box{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1.5fr;
+    margin-top: 2.5rem;
+} 
+
+.plus-minus-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.icons{
+    font-weight: bold;
+    cursor: pointer;
+    color: #ff7d1b;
+}
+
+.add-to-cart-box button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    border: none;
+    background-color: #ff7d1b;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-to-cart-box button p{
+    font-weight: bold;
+    font-size: 0.9rem;
+}

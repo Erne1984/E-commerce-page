@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './App.css';
 
 import Header from './components/Header/Header';
-import Gallery from './components/Galery/Gallery';
+import Gallery from './components/Gallery/Gallery';
+import Details from './components/Details/Details';
 import { ProductsImg } from './types/ProductsImg';
 
 const productsImgsUrl: ProductsImg[] = [
@@ -30,11 +31,12 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className='main-content'>
         <Gallery 
         mainImgUrl={currentMainImg} 
         imgsRow={productsImgsUrl} 
         setCurrentImg={setCurrentImg}/>
+        <Details/>
       </main>
     </>
   );
