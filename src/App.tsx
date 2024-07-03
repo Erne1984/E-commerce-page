@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Gallery from './components/Gallery/Gallery';
 import Details from './components/Details/Details';
 import { ProductsImg } from './types/ProductsImg';
+import Modal from './components/Modal/Modal';
 
 const productsImgsUrl: ProductsImg[] = [
   {
@@ -26,17 +27,28 @@ const productsImgsUrl: ProductsImg[] = [
 ];
 
 function App() {
-  const [currentMainImg, setCurrentImg] = useState(productsImgsUrl[0].mainImgUrl)
+  const [currentMainImg, setCurrentImg] = useState(productsImgsUrl[0].mainImgUrl);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
       <Header />
       <main className='main-content'>
-        <Gallery 
-        mainImgUrl={currentMainImg} 
-        imgsRow={productsImgsUrl} 
-        setCurrentImg={setCurrentImg}/>
-        <Details/>
+        <Gallery
+          mainImgUrl={currentMainImg}
+          imgsRow={productsImgsUrl}
+          setCurrentImg={setCurrentImg}
+          openModal={openModal}
+        />
+        <Modal 
+          mainImgModalUrl={currentMainImg} 
+          isModalOpen={isModalOpen} 
+          closeModal={closeModal}
+        />
+        <Details />
       </main>
     </>
   );

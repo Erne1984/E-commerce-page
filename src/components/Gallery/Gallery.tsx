@@ -6,12 +6,15 @@ interface GalleryProps {
     mainImgUrl: string;
     imgsRow: ProductsImg[];
     setCurrentImg: Dispatch<SetStateAction<string>>;
+    openModal: () => void;
 }
 
 function Gallery(props: GalleryProps): JSX.Element {
     return (
         <div className="gallery-box">
-            <img className='main-img' src={props.mainImgUrl} alt="Gallery Image" />
+            <img className='main-img' src={props.mainImgUrl} alt="Gallery Image" onClick={props.openModal}/>
+
+
 
             <div className="thumbnails-row">
                 {props.imgsRow.map((img, index) => (
