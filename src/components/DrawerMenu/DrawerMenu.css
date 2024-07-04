@@ -1,0 +1,34 @@
+.drawer-menu {
+    position: absolute;
+    background-color: #fff;
+    height: 100%;
+    width: 200px;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.drawer-menu-close-icon {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.menu {
+    display: flex;
+    gap: 0.7rem;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.menu li {
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.menu li:first-child{
+    margin-top: 1rem;
+}
+
+.menu li:hover{
+    border-bottom: 2px solid #ff7d1b;
+}

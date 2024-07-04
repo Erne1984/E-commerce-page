@@ -17,6 +17,10 @@
     padding-bottom: 10px;
 }
 
+.icon-burguer{
+    cursor: pointer;
+}
+
 .cart-box-mobile {
     display: flex;
     align-items: center;
