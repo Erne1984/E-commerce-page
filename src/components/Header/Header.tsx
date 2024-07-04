@@ -2,8 +2,20 @@ import './Header.css';
 import DropdownCart from '../DropdownCart/DropdownCart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 export default function Header({ }) {
+    const [dropdown, setDropdown] = useState(false)
+
+    function handleDropdown(){
+        if(!dropdown){
+            setDropdown(true)
+        }else{
+            setDropdown(false)
+        }
+    }
+
+
     return (
         <>
             <nav className='nav-header'>
@@ -22,9 +34,9 @@ export default function Header({ }) {
                 <div className='right-column'>
 
                     <div className='dropdown-menu-box'>
-                        <FontAwesomeIcon className='cart' icon={faCartShopping} />
+                        <FontAwesomeIcon className='cart' icon={faCartShopping} onClick={handleDropdown} />
 
-                        <DropdownCart/>
+                        <DropdownCart dropdownState={dropdown}/>
                     </div>
 
                     <img src='./image-avatar.png' className='avatar'></img>

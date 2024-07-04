@@ -1,13 +1,21 @@
 import './DropdownCart.css'
 
-export default function DropdownCart(){
+interface DropdownCartProps {
+    dropdownState: Boolean;
+}
 
-    return(
-        <div className="dropdown-menu">
+export default function DropdownCart(props: DropdownCartProps): JSX.Element {
+
+    return (
+        <div className={`dropdown-menu ${props.dropdownState ? "active" : "none"}`}>
 
             <h4>Cart</h4>
 
-            <button>Checkout</button>
+            <ul className='list-of-itens-cart'>
+
+            </ul>
+
+            <button className='btn-checkout'>Checkout</button>
         </div>
     )
 }
