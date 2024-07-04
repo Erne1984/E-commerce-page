@@ -64,6 +64,7 @@ function App() {
             imgsRow={productsImgsUrl}
             setCurrentImg={setCurrentImg}
             openModal={openModal}
+            isMobile={isMobile}
           />
           <Details />
         </main>
