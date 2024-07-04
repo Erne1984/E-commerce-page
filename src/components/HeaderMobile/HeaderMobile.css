@@ -1,7 +1,7 @@
 .menu-mobile {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 3rem;
+    padding: 1rem 2rem;
 }
 
 .logo-box-mobile {

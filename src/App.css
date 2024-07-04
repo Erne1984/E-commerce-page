@@ -1,13 +1,13 @@
 .main-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.3rem;
-    padding: 4rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+  padding: 4rem 6rem;
+}
+
+@media (max-width: 975px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    padding: 0.8rem 0.8rem;
   }
-  
-  @media (max-width: 936px) {
-    .main-content {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}
