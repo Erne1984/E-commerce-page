@@ -68,3 +68,12 @@
     border: #ff7d1b solid 2px;
     cursor: pointer;
 }
+
+
+
+@media (max-width: 1200px) {
+    .nav-header {
+        padding: 2rem 6rem;
+    }
+  }
+  

@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 import Header from './components/Header/Header';
+import HeaderMobile from './components/HeaderMobile/HeaderMobile';
 import Gallery from './components/Gallery/Gallery';
 import Details from './components/Details/Details';
 import { ProductsImg } from './types/ProductsImg';
@@ -28,14 +29,26 @@ const productsImgsUrl: ProductsImg[] = [
 
 function App() {
   const [currentMainImg, setCurrentImg] = useState(productsImgsUrl[0].mainImgUrl);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 885);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 885);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
-
       <Modal
         mainImgModalUrl={currentMainImg}
         isModalOpen={isModalOpen}
@@ -44,7 +57,7 @@ function App() {
         closeModal={closeModal}
       />
       <div>
-        <Header />
+        {isMobile ? <HeaderMobile /> : <Header />}
         <main className='main-content'>
           <Gallery
             mainImgUrl={currentMainImg}
@@ -54,9 +67,7 @@ function App() {
           />
           <Details />
         </main>
-
       </div>
-
     </>
   );
 }
