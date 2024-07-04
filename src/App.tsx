@@ -35,21 +35,28 @@ function App() {
 
   return (
     <>
-      <Header />
-      <main className='main-content'>
-        <Gallery
-          mainImgUrl={currentMainImg}
-          imgsRow={productsImgsUrl}
-          setCurrentImg={setCurrentImg}
-          openModal={openModal}
-        />
-        <Modal 
-          mainImgModalUrl={currentMainImg} 
-          isModalOpen={isModalOpen} 
-          closeModal={closeModal}
-        />
-        <Details />
-      </main>
+
+      <Modal
+        mainImgModalUrl={currentMainImg}
+        isModalOpen={isModalOpen}
+        imgsRow={productsImgsUrl}
+        setCurrentImg={setCurrentImg}
+        closeModal={closeModal}
+      />
+      <div>
+        <Header />
+        <main className='main-content'>
+          <Gallery
+            mainImgUrl={currentMainImg}
+            imgsRow={productsImgsUrl}
+            setCurrentImg={setCurrentImg}
+            openModal={openModal}
+          />
+          <Details />
+        </main>
+
+      </div>
+
     </>
   );
 }

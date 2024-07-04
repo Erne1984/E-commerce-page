@@ -1,13 +1,8 @@
-/* Centralizar o dialog */
 dialog {
     height: 100%;
     width: 100%;
     border: none;
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-dialog::backdrop {
-    
 }
 
 .modal-container{
@@ -18,6 +13,9 @@ dialog::backdrop {
     padding: 1rem;
     border-radius: 10px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal-main-img {
@@ -31,4 +29,18 @@ dialog::backdrop {
     right: 1rem;
     cursor: pointer;
     color: #333;
+}
+
+.modal-thumbnails-row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 1.2rem;
+}
+
+.thumbnails-modal{
+    border-radius: 15px;
+    width: 70px;
+    height: auto;
+    cursor: pointer;
 }
