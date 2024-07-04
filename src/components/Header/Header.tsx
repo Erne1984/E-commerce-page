@@ -1,6 +1,7 @@
-import './Header.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import './Header.css';
+import DropdownCart from '../DropdownCart/DropdownCart';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header({ }) {
     return (
@@ -20,7 +21,11 @@ export default function Header({ }) {
 
                 <div className='right-column'>
 
-                    <FontAwesomeIcon className='cart' icon={faCartShopping} />
+                    <div className='dropdown-menu-box'>
+                        <FontAwesomeIcon className='cart' icon={faCartShopping} />
+
+                        <DropdownCart/>
+                    </div>
 
                     <img src='./image-avatar.png' className='avatar'></img>
 
